@@ -3,11 +3,12 @@ const reset = document.querySelector('.reset');
 const red = document.querySelector('#red');
 const blue = document.querySelector('#blue');
 const green = document.querySelector('#green');
+const rColor = document.querySelector('#random');
 
 
 createGrid = () => {
-    var x = prompt("Type grid width + height!");
-    var y = x * x;
+    let x = prompt("Type grid width + height!");
+    let y = x * x;
     const canvas = document.querySelector('.canvas');
     for (let i = 0; i < y; i++) {
         const div = document.createElement("div");
@@ -40,6 +41,17 @@ createGrid = () => {
             div.addEventListener('mouseover', () => {
                 div.setAttribute('style', 'background-color: green;');
                 console.log('green');
+            })
+        });
+
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+
+        rColor.addEventListener('click', () => {
+            div.addEventListener('mouseover', () => {
+                div.setAttribute('style', `background-color: rgb(` + r + `, ` + g + `, ` + b + `);`);
+
             })
         });
     }
