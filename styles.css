@@ -1,17 +1,40 @@
+body {
+    display: flex;
+}
+
 .canvas {
     display: grid;
-    grid-template-columns: repeat(16, 25px);
-    grid-template-rows: repeat(16, 25px);
-    border-radius:5px;
+    /* grid-template-columns: repeat(16, 25px);
+    grid-template-rows: repeat(16, 25px);  */
+    display: inline-grid;
 }
 
 
 .item {
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+.colors {
+    width: 100px;
+    height: 100px;
+    border-radius:100px;
+}
+
+.colors#red {
     background-color: red;
-    border-radius:5px;
-    border-style: solid;
-    border-color: yellow;
-    padding: 0;
-    width: 20px;
-    height: 20px;
+}
+
+.colors#blue {
+    background-color: blue;
+}
+.colors#green {
+    background-color: green;
+}
+
+.colors:hover{
+    opacity: 70%;
+    transition: 0.2s;
+   
 }
