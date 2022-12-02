@@ -7,18 +7,39 @@
         <script src="script.js" DEFER></script>
     </head>
     <body>
+        <div class="heading">
+        <h1>Etch-A-Sketch</h1>
+        <p>Welcome to my Etch-a-Sketch project! Click the 'Start' button below to create your canvas and
+             begin drawing!
+        </p>
+        
+        <button class="getSize" id="startButton">Start</button>
+        </div>
 
-
+        <div class="container">
         <div class="canvas">
         </div>
-        
-        <div class="buttons">
-        <button class="colors" id="red"></button>
-        <button class="colors" id="blue"></button>
-        <button class="colors" id="green"></button>
-        <button class="colors" id="random">Randomize</button>
-        <button class="reset">Reset</button>
-        <button class="test" onclick="Test()">Test</button>
+        <div class="ColorContainer">
+            <div class="rgb">
+                <button class="colors" id="red"></button> 
+                <button class="colors" id="orange"></button>
+                <button class="colors" id="yellow"></button>
+                <button class="colors" id="blue"></button>
+                <button class="colors" id="green"></button>
+                <button class="colors" id="purple"></button>
+                <button class="colors" id="white"></button>
+                <button class="colors" id="random">RND</button>
+                
+            </div>
+            <div class="pick" id="colorPick">
+                <input type="color" id="colorpicker" value="#0000ff"></input>
+            </div>
+                    
+            <div class="reset">
+               <button class="getSize" id="reset">Reset</button>
+            </div>
+                
+        </div>
         </div>
 
     </body>
